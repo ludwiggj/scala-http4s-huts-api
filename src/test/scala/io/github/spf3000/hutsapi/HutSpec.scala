@@ -1,7 +1,5 @@
 package io.github.spf3000.hutsapi
 
-
-import cats._
 import cats.effect.IO
 import io.circe.generic.auto._
 import io.circe.syntax._
@@ -12,9 +10,7 @@ import org.http4s._
 import org.http4s.implicits._
 import org.specs2.matcher.MatchResult
 import org.specs2.mutable.Specification
-import scala.io.Source
 import scala.collection.mutable.ListBuffer
-
 
 class HutSpec extends Specification {
 
@@ -91,6 +87,4 @@ class HutSpec extends Specification {
 
   private[this] def deleteHutReturns204(): MatchResult[Status] =
     retDeleteHut.status must beEqualTo(Status.NoContent)
-
-
 }
